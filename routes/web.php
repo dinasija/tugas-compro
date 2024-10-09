@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\ServiceController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +23,8 @@ Route::get('/blog',[BlogController::class,'blog'])->name('blog');
 Route::get('/blog/detail',[BlogController::class,'detail'])->name('blog_detail');
 Route::get('/slider',[HomeController::class,'index'])->name('slider');
 Route::get('/services',[HomeController::class,'index'])->name('services');
+
+Route::get('backend/login',[LoginController::class,'index'])->name('backend.login');
+Route::get('backend/blog',[BlogController::class,'index'])->name('backend.blog');
+Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
+Route::get('backend/services',[ServiceController::class,'index'])->name('backend.services');
