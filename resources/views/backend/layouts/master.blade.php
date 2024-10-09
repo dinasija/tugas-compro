@@ -48,17 +48,17 @@
                     <span>Menu</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="slider.html">
+                <a class="nav-link" href="{{route('backend.slider')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Slider</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="layanan.html">
+                <a class="nav-link" href="{{route('backend.services')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Layanan</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="blog.html">
+                <a class="nav-link" href="{{route('backend.blog')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Blog</span></a>
             </li>
