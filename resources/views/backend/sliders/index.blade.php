@@ -21,15 +21,21 @@
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
-                                        <tbody>   
+                                        <tbody>
+                                        @php 
+                                        $no=1;
+                                        @endphp 
+                                            @foreach ($slider as $item)
                                             <tr>
-                                                <td>1</td>
-                                                <td>berita</td>
-                                                <td><img src="images/satu.jpg" width="100" alt=""></td>
-                                                <td>ini</td>
-                                                <td><a href="" class="btn btn-warning">Edit</a>                                            </a>
+                                                <td>{{ $no++}}</td>
+                                                <td>{{ $item->tittle }}</td>
+                                                <td><img src="{{asset($item->file)}}" width="100" alt=""></td>
+                                                <td>{{ $item->description }}</td>
+                                                <td><a href="" class="btn btn-warning">Edit</a>
+                                                @csrf
                                                 <button class="btn btn-danger">Hapus</button></td>                                                </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
