@@ -20,14 +20,20 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>   
+                    <tbody>  
+                    @php 
+                    $no=1;
+                    @endphp 
+                        @foreach ($service as $item) 
                         <tr>
-                            <td>1</td>
-                            <td>berita</td>
-                            <td>ini</td>
-                            <td><a href="" class="btn btn-warning">Edit</a>                                            
+                            <td>{{$no++}}</td>
+                            <td>{{$item->tittle}}</td>
+                            <td>{{$item->description}}</td>
+                            <td><a href="" class="btn btn-warning">Edit</a>  
+                            @csrf                                          
                             <button class="btn btn-danger">Hapus</button></td>                                               
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
