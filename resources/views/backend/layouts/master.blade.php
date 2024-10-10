@@ -43,11 +43,6 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Menu</span></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{route('backend.slider')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Slider</span></a>

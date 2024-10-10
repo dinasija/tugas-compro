@@ -28,3 +28,8 @@ Route::get('backend/login',[LoginController::class,'index'])->name('backend.logi
 Route::get('backend/blog',[BlogController::class,'index'])->name('backend.blog');
 Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
 Route::get('backend/services',[ServiceController::class,'index'])->name('backend.services');
+
+Route::get('backend/services/tambah',[ServiceController::class,'tambah'])->name('backend.services.tambah');
+Route::get('backend/blog/tambah',[BlogController::class,'tambah'])->name('backend.blog.tambah');
+Route::get('backend/sliders/tambah',[SliderController::class,'tambah'])->name('backend.sliders.tambah');
+
