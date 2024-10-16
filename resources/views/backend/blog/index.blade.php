@@ -10,6 +10,9 @@
                             </div>
                             <div class="card-body">
                                 <a href="{{route('backend.blog.tambah')}}" class="btn btn-primary mb-2">Tambah</a>
+                                @if (session('success'))
+                                <span style="color: red">{{session('success')}}</span>
+                                @endif
                                 <div class="table-responsive">
                                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
@@ -17,6 +20,7 @@
                                                 <th>Id</th>
                                                 <th>Judul</th>
                                                 <th>File</th>
+                                                <th>desscription</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -30,7 +34,7 @@
                                                 <td>{{$item->tittle}}</td>
                                                 <td><img src="{{asset($item->file)}}" width="100" alt=""></td>
                                                 <td><a href="" class="btn btn-warning">Edit</a>
-                                                @csrf
+                                                <form action="" method="post"></form>
                                                 <button class="btn btn-danger">Hapus</button></td>                                                </td>
                                             </tr>
                                             @endforeach

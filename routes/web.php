@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\BlogController as BackendBlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SliderController;
@@ -31,5 +32,7 @@ Route::get('backend/services',[ServiceController::class,'index'])->name('backend
 
 Route::get('backend/services/tambah',[ServiceController::class,'tambah'])->name('backend.services.tambah');
 Route::get('backend/blog/tambah',[BlogController::class,'tambah'])->name('backend.blog.tambah');
+Route::post('backend/blog/aksi_tambah',[BackendBlogController::class,'aksi_tambah'])
+->name('backend.blog.aksi_tambah');
 Route::get('backend/sliders/tambah',[SliderController::class,'tambah'])->name('backend.sliders.tambah');
 
