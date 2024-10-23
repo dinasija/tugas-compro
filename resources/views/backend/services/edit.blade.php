@@ -9,17 +9,17 @@
             @endforeach
             @endif
 
-            <form class="user" action="{{ route('backend.services.tambah') }}" method="post" enctype="multipart/form-data">
+            <form class="user" action="{{ route('backend.services.aksi_edit', $services->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <input type="text" name="tittle" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Masukan Judul" >
+                    <input type="text" name="tittle" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Masukan Judul" value="{{$services->tittle}}">
 
                 </div>
                 <div class="form-group">
-                    <textarea name="description" class="form-control editor" placeholder="masukan deskripsi" id="" cols="30" rows="3" ></textarea>
+                    <textarea name="description" class="form-control editor" placeholder="masukan deskripsi" id="" cols="30" rows="3" >{{$services->description}}</textarea>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary btn-user">Tambah</button>
+                    <button type="submit" class="btn btn-primary btn-user">Edit</button>
                 </div>
             </form>
         </div>

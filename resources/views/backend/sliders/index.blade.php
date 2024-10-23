@@ -31,7 +31,7 @@
                                                 <td>{{ $item->tittle }}</td>
                                                 <td><img src="{{asset($item->file)}}" width="100" alt=""></td>
                                                 <td>{{ $item->description }}</td>
-                                                <td><a href="" class="btn btn-warning">Edit</a>
+                                                <td><a href="{{route('backend.sliders.edit', $item->id)}}" class="btn btn-warning">Edit</a>
                                                 @csrf
                                                 <button class="btn btn-danger">Hapus</button></td>                                                </td>
                                             </tr>

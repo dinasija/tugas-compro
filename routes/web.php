@@ -36,3 +36,12 @@ Route::post('backend/blog/aksi_tambah',[BackendBlogController::class,'aksi_tamba
 ->name('backend.blog.aksi_tambah');
 Route::get('backend/sliders/tambah',[SliderController::class,'tambah'])->name('backend.sliders.tambah');
 
+Route::get('backend/blog/edit/{id}',[BackendBlogController::class,'edit'])->name('backend.blog.edit');
+Route::post('backend/blog/aksi_edit/{id}',[BackendBlogController::class,'aksi_edit'])->name('backend.blog.aksi_edit');
+
+Route::get('backend/services/edit/{id}',[ServiceController::class,'edit'])->name('backend.services.edit');
+Route::post('backend/services/aksi_edit/{id}',[ServiceController::class,'aksi_edit'])->name('backend.services.aksi_edit');
+
+Route::get('backend/sliders/edit/{id}',[SliderController::class,'edit'])->name('backend.sliders.edit');
+Route::post('backend/sliders/aksi_edit/{id}',[SliderController::class,'aksi_edit'])->name('backend.sliders.aksi_edit');
+

@@ -20,7 +20,6 @@
                                                 <th>Id</th>
                                                 <th>Judul</th>
                                                 <th>File</th>
-                                                <th>desscription</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -33,7 +32,7 @@
                                                 <td>{{$no++}}</td>
                                                 <td>{{$item->tittle}}</td>
                                                 <td><img src="{{asset($item->file)}}" width="100" alt=""></td>
-                                                <td><a href="" class="btn btn-warning">Edit</a>
+                                                <td><a href="{{route('backend.blog.edit', $item->id)}}" class="btn btn-warning">Edit</a>
                                                 <form action="" method="post"></form>
                                                 <button class="btn btn-danger">Hapus</button></td>                                                </td>
                                             </tr>
