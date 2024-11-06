@@ -46,6 +46,19 @@ class BlogController extends Controller
         Blogs::insert($data);
         return redirect()->route('backend.blog')->with('success', 'blog berhasil ditambahkan');
     }
+
+    public function aksi_hapus($id){
+        $ambilDataBlog = Blogs::where('id', $id)->first();
+        Blogs::where('id', $id)->delete();
+        $this->hapus_gambar($ambilDataBlog->file);
+        return redirect()->back(); 
+    }
+    protected function hapus_gambar($gambar){
+        if (file_exists($gambar)) {
+            unlink($gambar);
+        }
+    }
+
     public function edit($id){
         $blog = Blogs::where('id', $id)->first();
         return view('backend.blog.edit',['blog'=>$blog]);
@@ -67,7 +80,7 @@ class BlogController extends Controller
             $file->move(public_path('blogs'), $filename);
             $data['file'] = 'blogs/' . $filename;
             $ambilDataBlog = Blogs::where('id', $id)->first();
-            // $this->hapus_gambar($ambilDataBlog->file);
+            $this->hapus_gambar($ambilDataBlog->file);
         }
         Blogs::where('id', $id)->update($data);
         return redirect()->route('backend.blog')->with('success', 'blog berhasil diubah');

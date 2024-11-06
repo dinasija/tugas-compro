@@ -33,8 +33,11 @@
                                                 <td>{{$item->tittle}}</td>
                                                 <td><img src="{{asset($item->file)}}" width="100" alt=""></td>
                                                 <td><a href="{{route('backend.blog.edit', $item->id)}}" class="btn btn-warning">Edit</a>
-                                                <form action="" method="post"></form>
-                                                <button class="btn btn-danger">Hapus</button></td>                                                </td>
+                                                <form action="{{ route('backend.blog.aksi_hapus', $item->id) }}" method="post">
+                                                    @csrf
+                                                    <button class="btn btn-danger">Hapus</button>
+                                                </form>
+                                                </td>
                                             </tr>
                                             @endforeach
                                         </tbody>

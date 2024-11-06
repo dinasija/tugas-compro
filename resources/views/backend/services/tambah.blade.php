@@ -9,7 +9,7 @@
             @endforeach
             @endif
 
-            <form class="user" action="{{ route('backend.services.tambah') }}" method="post" enctype="multipart/form-data">
+            <form class="user" action="{{ route('backend.services.aksi_tambah') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <input type="text" name="tittle" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Masukan Judul" >

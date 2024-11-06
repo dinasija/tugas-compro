@@ -28,10 +28,12 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$item->tittle}}</td>
-                            <td>{{$item->description}}</td>
+                            <td>{!!$item->description!!}</td>
                             <td><a href="{{route('backend.services.edit', $item->id)}}" class="btn btn-warning">Edit</a>  
+                            <form action="{{ route('backend.services.aksi_hapus', $item->id) }}" method="post">
                             @csrf                                          
-                            <button class="btn btn-danger">Hapus</button></td>                                               
+                                <button class="btn btn-danger">Hapus</button></td>  
+                            </form>                                             
                         </tr>
                         @endforeach
                     </tbody>

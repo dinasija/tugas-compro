@@ -2,7 +2,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-body">
-            <h2>Tambah Slider</h2>
+            <h2>Edit Slider</h2>
             @if ($errors)
             @foreach ($errors->all() as $item)
             <p class="text-danger"> {{ $item }}</p>
